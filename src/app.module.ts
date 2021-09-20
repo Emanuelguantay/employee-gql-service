@@ -13,11 +13,12 @@ import { EmployeeModule } from './employee/employee.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3306,
+      
       username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: [],
+      password: null,
+      database: 'employee',
+      //entities: ["**/*.entity*{.ts, .js}"],
+      entities: ["dist/**/**.entity{.ts,.js}"],
       synchronize: true,
     })
 ],
