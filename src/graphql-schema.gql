@@ -11,5 +11,5 @@ type Employee {
 }
 
 type Query {
-  getEmployees: Employee!
+  getAllEmployees: [Employee!]!
 }

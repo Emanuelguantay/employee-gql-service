@@ -12,5 +12,11 @@ export class EmployeeService {
 
     async findAll(): Promise<Employee[]>{
         return this.EmployeeRepository.find();
+        // let emp: Employee = new Employee()
+        // emp.id = "1",
+        // emp.firstName = "Emanuel"
+        // emp.lastName = "Guantay",
+        // emp.designation = "Developer"
+        // return [emp]
     }
 }

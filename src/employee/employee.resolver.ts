@@ -10,7 +10,7 @@ export class EmployeeResolver {
 
     }
     
-    @Query(()=> Employee, {name: "getEmployees"})
+    @Query(()=> [Employee], {name: "getAllEmployees"})
     findAll(){
         return this.employeeService.findAll();
     }
