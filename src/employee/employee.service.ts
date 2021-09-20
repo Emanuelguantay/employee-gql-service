@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm/repository/Repository';
+import { EmployeeCreateDTO } from './dto/crete-employee.input';
 import { Employee } from './entities/employee.entity';
 
 @Injectable()
@@ -18,5 +19,10 @@ export class EmployeeService {
         // emp.lastName = "Guantay",
         // emp.designation = "Developer"
         // return [emp]
+    }
+
+    async create(employee: EmployeeCreateDTO): Promise<Employee>{
+        let emp = this.EmployeeRepository.create(employee);
+        return this.EmployeeRepository.save(emp);
     }
 }
